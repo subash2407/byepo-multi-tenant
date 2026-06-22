@@ -6,7 +6,7 @@ export const databaseConfig: SequelizeModuleOptions = {
   port: 3306,
   username: 'root',
   password: '',
-  database: 'byepo_multi_tenant_db',
+  database: 'byepo_multi_tenant',
   autoLoadModels: true,
   synchronize: true,
   sync: { alter: true },  

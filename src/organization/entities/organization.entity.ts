@@ -26,12 +26,8 @@ export class Organization extends Model<OrganizationAttributes> {
 
     @Column({
         type: DataType.STRING,
-        allowNull: false,
+        allowNull: true,
     })
     declare email: string;
 
-    @Column({
-        type: DataType.STRING,
-    })
-    declare domain: string;
 }

@@ -10,6 +10,7 @@ import {
 import { Optional } from 'sequelize';
 import { UserAttributes } from '../interface/user.interface';
 import { Organization } from 'src/organization/entities/organization.entity';
+import { Role } from 'src/common/enum';
 
 @Table({
   tableName: 'users',
@@ -55,4 +56,10 @@ export class User extends Model<UserAttributes> {
     defaultValue: true,
   })
   declare is_active: boolean;
+
+  @Column({
+    type: DataType.ENUM(...Object.values(Role)),
+    defaultValue: Role.END_USER,
+  })
+  declare role: string;
 }
